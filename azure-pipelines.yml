@@ -23,5 +23,5 @@ steps:
     vsckEndpoint: 'vscloudkernel-dev'
     nugetpat: 'vscloudkernel-nuget'
     language: 'typescript;csharp'
-    githubpat: 'jumattos'
-    nugetVersion: 'latest'
+    githubpat: 'jumattos (1)'
+    nugetVersion: '0.1.826-alpha'
