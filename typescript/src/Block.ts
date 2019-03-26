@@ -8,5 +8,6 @@ export default class Block extends GameObject {
 
     interact(): void {
         console.log('You get a coin!');
+        console.log('And you get a coin!');
     }
 }
