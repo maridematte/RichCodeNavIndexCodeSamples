@@ -2,7 +2,7 @@ namespace game
 {
     interface Drawable
     {
-        // hi
+        // hi - you rock
         void draw();
     }
 }
