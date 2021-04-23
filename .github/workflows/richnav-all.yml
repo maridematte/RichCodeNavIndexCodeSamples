@@ -8,7 +8,6 @@ on:
   pull_request:
   push:
   # **** Add any the name of your default branch, or any branch you want indexed on every push **** #
-    branches: [ main ]
 
 jobs:
   richnav:
