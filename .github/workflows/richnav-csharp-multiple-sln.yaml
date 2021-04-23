@@ -31,7 +31,7 @@ jobs:
       run: dotnet restore
       working-directory: ${{ matrix.slnDirs }}
       
-    - uses: microsoft/RichCodeNavIndexer@v0.1
+    - uses: jepetty/RichCodeNavIndexer@lsifv6
       with: 
         languages: csharp
         repo-token: ${{ secrets.GITHUB_TOKEN }}
