@@ -1,0 +1,33 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  EnableRichCodeNavigation: true
+  System.Debug: true
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 16.x'
+  inputs:
+    versionSpec: 16.x
+
+- task: JavaToolInstaller@0
+  displayName: 'Install Java 11'
+  inputs:
+    versionSpec: '11'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
+
+- task: RichCodeNavIndexer@0
+  displayName: Codex Upload to Development
+  inputs:
+    languages: csharp,typescript,java
+    nugetFeed: 'https://pkgs.dev.azure.com/noecald/_packaging/noecald/nuget/v3/index.json'
+    isPrivateFeed: true
+    nugetVersion: '0.1.2254-alpha'
+    environment: development
+    disableLsifLogging: false
+  continueOnError: true
