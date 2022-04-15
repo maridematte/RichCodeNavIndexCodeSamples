@@ -40,7 +40,7 @@ jobs:
       working-directory: typescript
       if: steps.caching-stage.outputs.cache-hit != 'true'
     
-    - uses: microsoft/RichCodeNavIndexer@v0.1
+    - uses: brianaeng/RichCodeNavIndexer@breng/updateNpmrc
       with: 
         languages: typescript
         repo-token: ${{ secrets.GITHUB_TOKEN }}
