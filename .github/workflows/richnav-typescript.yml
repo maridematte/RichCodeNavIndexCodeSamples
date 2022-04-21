@@ -44,4 +44,5 @@ jobs:
       with: 
         languages: typescript
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+        environment: development
      
